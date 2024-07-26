@@ -1,0 +1,24 @@
+package org.example.day7.iocDemo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class House {
+    Bathroom bathroom;
+    Livingroom livingroom;
+
+    @Autowired
+    public House(Bathroom bathroom, Livingroom livingroom) {
+        this.bathroom = bathroom;
+        this.livingroom = livingroom;
+    }
+
+    @Override
+    public String toString() {
+        return "House{" +
+                "bathroom=" + bathroom +
+                ", livingroom=" + livingroom +
+                '}';
+    }
+}
